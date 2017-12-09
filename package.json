@@ -1,10 +1,10 @@
 {
   "name": "canechair-framework",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "prestart": "node cc.build/cc.build.welcome_message.js",
+    "prestart": "babel-node cc.build/cc.build.welcome_message.js",
     "start": "npm-run-all --parallel node-security-platform--check start-dev-server",
     "node-security-platform--check": "nsp check",
     "start-dev-server": "node cc.build/cc.build.server.dev.js"

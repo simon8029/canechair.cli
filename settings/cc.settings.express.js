@@ -1,12 +1,12 @@
-const Express = require('express'), //Fast, unopinionated, minimalist web framework for node
-  Morgan = require('morgan'), //HTTP request logger middleware for node.js
-  Compression = require('compression'), //Node.js compression middleware. Support deflate ang gzip
-  BodyParser = require('body-parser'), // Node.js body parsing middleware. Parse incoming request bodies
-  MethodOverride = require('method-override'), //  use HTTP verbs such as PUT or DELETE in places where the client doesn't support it.
-  Session = require('express-session'), // Create a session middleware with the given options.
-  Passport = require('passport'), // Authentication middleware for Node.js
-  ConnectFlash = require('connect-flash'), // A special area of the session used for storing messages.
-  CCSettings = require('./cc.settings');
+import Express from 'express'; //Fast, unopinionated, minimalist web framework for node
+import Morgan from 'morgan'; //HTTP request logger middleware for node.js
+import Compression from 'compression'; //Node.js compression middleware. Support deflate ang gzip
+import BodyParser from 'body-parser'; // Node.js body parsing middleware. Parse incoming request bodies
+import MethodOverride from 'method-override'; //  use HTTP verbs such as PUT or DELETE in places where the client doesn't support it.
+import ExpressSession from 'express-session'; // Create a session middleware with the given options.
+import Passport from 'passport'; // Authentication middleware for Node.js
+import ConnectFlash from 'connect-flash'; // A special area of the session used for storing messages.
+const CCSettings = require('./cc.settings');
 
 module.exports = function () {
   // Create a new instance of an Express application.
@@ -28,7 +28,7 @@ module.exports = function () {
 
   // The session middleware adds a session object to all request objects in the Application. Using this session object to set or get any property that use in the current session.
   // Uncomment below if using session.
-  // App.use(Session({
+  // App.use(ExpressSession({
   //   saveUninitialized: true,
   //   resave: true,
   //   secret: "your secret string here"
