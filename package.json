@@ -1,13 +1,15 @@
 {
   "name": "canechair-framework",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "",
   "main": "index.js",
   "scripts": {
     "prestart": "babel-node cc.build/cc.build.welcome_message.js",
-    "start": "npm-run-all --parallel node-security-platform--check start-dev-server",
+    "start": "npm-run-all --parallel eslint:watch node-security-platform--check start-dev-server ",
+    "start-dev-server": "babel-node cc.build/cc.build.server.dev.js",
     "node-security-platform--check": "nsp check",
-    "start-dev-server": "babel-node cc.build/cc.build.server.dev.js"
+    "eslint": "esw webpack.config.* src cc.build",
+    "eslint:watch": "npm run eslint -- --watch"
   },
   "author": "simon8029",
   "license": "MIT",
