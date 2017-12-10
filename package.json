@@ -9,7 +9,8 @@
     "start-dev-server": "babel-node cc.build/cc.build.server.dev.js",
     "node-security-platform--check": "nsp check",
     "eslint": "esw webpack.config.* src cc.build",
-    "eslint:watch": "npm run eslint -- --watch"
+    "eslint:watch": "npm run eslint -- --watch",
+    "test": "mocha --reporter progress cc.buildScripts/cc.buildScripts.testSetting.js \"src/**/*.spec.js\""
   },
   "author": "simon8029",
   "license": "MIT",
