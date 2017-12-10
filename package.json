@@ -4,13 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "prestart": "babel-node cc.build/cc.build.welcome_message.js",
-    "start": "npm-run-all --parallel eslint:watch node-security-platform--check start-dev-server ",
-    "start-dev-server": "babel-node cc.build/cc.build.server.dev.js",
+    "prestart": "babel-node cc.buildScripts/cc.buildScripts.welcome_message.js",
+    "start": "npm-run-all --parallel eslint:watch node-security-platform--check start-dev-server test:watch",
+    "start-dev-server": "babel-node cc.buildScripts/cc.buildScripts.server.dev.js",
     "node-security-platform--check": "nsp check",
     "eslint": "esw webpack.config.* src cc.build",
     "eslint:watch": "npm run eslint -- --watch",
-    "test": "mocha --reporter progress cc.buildScripts/cc.buildScripts.testSetting.js \"src/**/*.spec.js\""
+    "test": "mocha --reporter progress cc.buildScripts/cc.buildScripts.testSetting.js \"src/**/*.spec.js\"",
+    "test:watch": "npm run test -- --watch"
   },
   "author": "simon8029",
   "license": "MIT",
