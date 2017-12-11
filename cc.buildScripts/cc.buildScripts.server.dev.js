@@ -27,6 +27,16 @@ App.get('/', (req, res) => {
   res.sendFile(Path.join(__dirname, '../src/index.html'));
 });
 
+App.get('/canechair-parts', (req, res) => {
+  res.json([
+    { "id": 1, "name": "back" },
+    { "id": 2, "name": "seat" },
+    { "id": 3, "name": "arm" },
+    { "id": 4, "name": "leg" },
+
+  ])
+})
+
 App.listen(Port, (err) => {
   if (err) {
     console.log(err);
