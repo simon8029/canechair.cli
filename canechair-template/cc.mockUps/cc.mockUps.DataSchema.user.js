@@ -1,4 +1,4 @@
-export const MockUserDataSchema = {
+export const schema = {
   "type": "object",
   "properties": {
     "users": {
@@ -19,15 +19,16 @@ export const MockUserDataSchema = {
           },
           "lastName": {
             "type": "string",
-            "faker": "name.lastName",
+            "faker": "name.lastName"
           },
           "email": {
             "type": "string",
             "faker": "internet.email"
           }
         },
-        required: ['id', 'firstName', 'lastName', 'email']
+        "required": ["id", "firstName", "lastName", "email"]
       }
     }
-  }
-}
+  },
+  "required": ["users"]
+};

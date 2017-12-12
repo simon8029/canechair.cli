@@ -5,14 +5,16 @@
   "main": "index.js",
   "scripts": {
     "prestart": "babel-node cc.buildScripts/cc.buildScripts.welcome_message.js",
-    "start": "npm-run-all --parallel eslint:watch node-security-platform--check start-dev-server test:watch",
+    "start": "npm-run-all --parallel eslint:watch node-security-platform--check start-dev-server test:watch start-mockapi",
     "start-dev-server": "babel-node cc.buildScripts/cc.buildScripts.server.dev.js",
     "node-security-platform--check": "nsp check",
     "eslint": "esw webpack.config.* src cc.build",
     "eslint:watch": "npm run eslint -- --watch",
     "test": "jest",
     "test:watch": "npm run test -- --watchAll",
-    "generate-mock-data": "babel-node cc.mockUps/cc.mockUps.mockDataGenerator"
+    "generate-mock-data": "babel-node cc.mockUps/cc.mockUps.mockDataGenerator.users",
+    "prestart-mockapi": "npm run generate-mock-data",
+    "start-mockapi": "json-server --watch cc.mockUps/mockData.users.json --port 8139"
   },
   "author": "Simon X.L.",
   "license": "MIT",
