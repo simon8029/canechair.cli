@@ -12,7 +12,7 @@ const Paths = {
 const Settings = WebpackMerge([
   {
     entry: {
-      canechairparts: Paths.src,
+      app: Paths.src,
     },
     output: {
       path: Paths.dist,
