@@ -1,3 +1,3 @@
 export default {
-  // Store init here.
+  sampleReducer: false
 };
