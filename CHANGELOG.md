@@ -1,5 +1,9 @@
 # Change Log
 
+##### [0.5.0 ] Close issue #22
+- Add @types packages for Jest, Node, Enzyme, react-redux
+- Add tsconfig.json
+- Add tslint.json
 ##### [0.4.1] - Close issue #20
 
 ##### [0.4.0] - Close issue #19
