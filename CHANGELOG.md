@@ -1,6 +1,6 @@
 # Change Log
 
-##### [0.3.0] - Close issue # 16
+##### [0.3.1] - Close issue #16
  - Integrate Typescript
 ##### [0.2.7] - Fix issue #6 #7 #9 #10
 - Add .gitignore file
