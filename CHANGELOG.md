@@ -1,6 +1,6 @@
 # Change Log
 
-##### [0.3.1] - Close issue #19
+##### [0.4.0] - Close issue #19
  - Create Typescript template
 ##### [0.3.1] - Close issue #16
  - Integrate Typescript
