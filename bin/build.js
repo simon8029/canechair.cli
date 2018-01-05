@@ -5,7 +5,7 @@ const figlet = require('figlet');
 const chalk = require('chalk');
 
 const build = (appName, template) => {
-    if (tempate === "ts") {
+    if (template === "ts") {
         cp('-r', __dirname + '/../canechair-template.ts/.', appName);
     } else {
         cp('-r', __dirname + '/../canechair-template/.', appName);
