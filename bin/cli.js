@@ -13,7 +13,7 @@ program
     .parse(process.argv);
 
 if (program.args.length > 0) {
-    spawn(build(program.args[0]), { shell: true, stdio: 'inherit' });
+    spawn(build(program.args[0], program.args[1]), { shell: true, stdio: 'inherit' });
 } else if (program.args.length < 1) {
     console.log(chalk.red('App name is required.'));
 }
