@@ -10,7 +10,7 @@ import Path from 'path';
 import Open from 'open';
 import Chalk from 'chalk';
 import Webpack from 'webpack';
-import WebpackConfigDev from '../webpack.config.dev';
+import WebpackConfigDev from '../settings/webpack/dev';
 
 /* eslint-disable no-console */
 const

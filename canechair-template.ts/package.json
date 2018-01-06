@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "npm-run-all --parallel eslint:watch node-security-platform--check start:dev",
-    "start:dev": "nodemon --exec \"webpack-dev-server --config ./.settings/webpack/dev.js\"",
+    "start:dev": "nodemon --exec \"webpack-dev-server --config ./settings/webpack/dev.js\"",
     "build": "webpack --config ./.settings/webpack/prod.js",
     "build:stats": "webpack --config ./.settings/webpack/prod.js --json > stats.json",
     "node-security-platform--check": "nsp check",
