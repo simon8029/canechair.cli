@@ -11,7 +11,7 @@
 ```sh
 npm install -g canechair-cli
 
-canechair-cli my-app ("canechair-cli my-app ts" for Typescript version)
+canechair-cli my-app 
 cd my-app/
 npm start
 ```
