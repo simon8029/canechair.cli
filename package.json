@@ -1,5 +1,5 @@
 {
-  "version": "0.5.0",
+  "version": "0.5.1",
   "main": "index.js",
   "bin": "bin/cli.js",
   "name": "canechair-cli",

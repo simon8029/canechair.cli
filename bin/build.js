@@ -7,6 +7,8 @@ const chalk = require('chalk');
 const build = (appName, template) => {
     if (template === "ts") {
         cp('-r', __dirname + '/../canechair-template.ts/.', appName);
+    } else if (template === "flow") {
+        cp('-r', __dirname + '/../canechair-template.flow/.', appName);
     } else {
         cp('-r', __dirname + '/../canechair-template/.', appName);
     }

@@ -1,5 +1,7 @@
 # Change Log
 
+##### [0.5.1 ] Close issue #23
+- Replace build.js and cli.js with osx formated files (copy&paste on osx system)
 ##### [0.5.0 ] Close issue #22
 - Add @types packages for Jest, Node, Enzyme, react-redux
 - Add tsconfig.json

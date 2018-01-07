@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-
 const program = require('commander')
 const spawn = require('child_process').spawn;
 const package = require('../package.json');
