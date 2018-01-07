@@ -20,8 +20,6 @@ npm start
 ### What’s Inside?
 * React/Redux
 * Webpack
-* TypeScript
-* AutoPrefixer
 * Babel
 * EsLint/TsLint
 * Jest
@@ -29,7 +27,7 @@ npm start
 * and Others
 
 ### Highlight
-* React, JSX, TSX, ES6, and TypeScript syntax support.
+* React, JSX, ES6 syntax support.
 * Language extras beyond ES6 like the object spread operator.
 * A dev server that lints for common errors.
 * CI integrated for Travis and Appveyor
