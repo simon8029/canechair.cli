@@ -1,5 +1,7 @@
 # Change Log
 
+##### [0.5.2 ] Close issue #25
+- Fix issue of 'Eslint complains about "Component is defined but never used". '
 ##### [0.5.1 ] Close issue #23
 - Replace build.js and cli.js with osx formated files (copy&paste on osx system)
 ##### [0.5.0 ] Close issue #22

@@ -17,7 +17,10 @@
     "mocha": true
   },
   "rules": {
-    "no-console": 1
+    "no-console": 1,
+    "react/jsx-uses-vars": [
+      2
+    ]
   },
   "plugins": [
     "react"
