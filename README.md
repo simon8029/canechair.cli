@@ -22,7 +22,8 @@ npm start
 
 
 ### What’s Inside?
-* React/Redux
+* React/Redux/Thunk
+* React-Router v4
 * Webpack
 * Babel
 * EsLint/TsLint
@@ -31,9 +32,9 @@ npm start
 * and Others
 
 ### Highlight
-* React, JSX, ES6 syntax support.
-* Language extras beyond ES6 like the object spread operator.
-* A dev server that lints for common errors.
+* TypeScripted ReactJS
+* ES6 syntax support.
+* Async api call.
 * CI integrated for Travis and Appveyor
 * When build for production:
   * Extract/Purify/Minify CSS
