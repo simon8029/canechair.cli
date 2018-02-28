@@ -3,8 +3,9 @@
     "tslint-react"
   ],
   "rules": {
+    "jsx-boolean-value": false,
     "align": [
-      true,
+      false,
       "parameters",
       "arguments",
       "statements"
@@ -24,7 +25,7 @@
     ],
     "interface-name": [
       true,
-      "never-prefix"
+      "always-prefix"
     ],
     "jsdoc-format": true,
     "jsx-no-lambda": false,
@@ -32,7 +33,7 @@
     "label-position": true,
     "max-line-length": [
       true,
-      120
+      820
     ],
     "member-ordering": [
       true,
@@ -40,11 +41,11 @@
       "static-before-instance",
       "variables-before-functions"
     ],
-    "no-any": true,
+    "no-any": false,
     "no-arg": true,
     "no-bitwise": true,
     "no-console": [
-      true,
+      false,
       "log",
       "error",
       "debug",
@@ -83,7 +84,9 @@
       "always"
     ],
     "switch-default": true,
-    "trailing-comma": false,
+    "trailing-comma": [
+      false
+    ],
     "triple-equals": [
       true,
       "allow-null-check"
