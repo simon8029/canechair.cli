@@ -6,9 +6,7 @@
  ![NPM Download](https://img.shields.io/npm/dt/canechair-cli.svg)
  [![GitHub issues](https://img.shields.io/github/issues/simon8029/canechair.cli.svg)]() 
  [![GitHub closed issues](https://img.shields.io/github/issues-closed/simon8029/canechair.cli.svg?colorB=green)]() 
- [![license](https://img.shields.io/github/license/simon8029/canechair.cli.svg)]()  
- [![GitHub commit activity](https://img.shields.io/github/commit-activity/4w/simon8029/canechair.cli.svg)]() 
- [![GitHub last commit](https://img.shields.io/github/last-commit/simon8029/canechair.cli.svg)]()
+ [![license](https://img.shields.io/github/license/simon8029/canechair.cli.svg)]() [![GitHub commit activity](https://img.shields.io/github/commit-activity/4w/simon8029/canechair.cli.svg)]() [![GitHub last commit](https://img.shields.io/github/last-commit/simon8029/canechair.cli.svg)]()
 
 
 
