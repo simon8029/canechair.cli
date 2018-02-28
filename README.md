@@ -2,8 +2,14 @@
 # CaneChair.Cli
 #### Typescripted ReactJS Development Environment Starter Kit
 
- [![Build Status](https://travis-ci.org/simon8029/canechair.cli.svg?branch=master)](https://travis-ci.org/simon8029/canechair.cli) [![GitHub issues](https://img.shields.io/github/issues/simon8029/canechair.cli.svg)]() [![GitHub closed issues](https://img.shields.io/github/issues-closed/simon8029/canechair.cli.svg?colorB=green)]() [![license](https://img.shields.io/github/license/simon8029/canechair.cli.svg)]()  [![GitHub commit activity the past week, 4 weeks, year](https://img.shields.io/github/commit-activity/4w/simon8029/canechair.cli.svg)]() [![GitHub last commit](https://img.shields.io/github/last-commit/simon8029/canechair.cli.svg)]()
- ![CaneChair-Cli](https://img.shields.io/npm/dt/canechair-cli.svg)
+ [![Build Status](https://travis-ci.org/simon8029/canechair.cli.svg?branch=master)](https://travis-ci.org/simon8029/canechair.cli)
+ ![NPM Download](https://img.shields.io/npm/dt/canechair-cli.svg)
+ [![GitHub issues](https://img.shields.io/github/issues/simon8029/canechair.cli.svg)]() 
+ [![GitHub closed issues](https://img.shields.io/github/issues-closed/simon8029/canechair.cli.svg?colorB=green)]() 
+ [![license](https://img.shields.io/github/license/simon8029/canechair.cli.svg)]()  
+ [![GitHub commit activity](https://img.shields.io/github/commit-activity/4w/simon8029/canechair.cli.svg)]() 
+ [![GitHub last commit](https://img.shields.io/github/last-commit/simon8029/canechair.cli.svg)]()
+
 
 
 
