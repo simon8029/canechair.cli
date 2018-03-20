@@ -20,8 +20,7 @@ class CaneChairManagement extends React.Component<ThisPropsType, ThisStateType> 
   render() {
     return (
       <div className="container my-3">
-        <h4>CaneChair.Cli Sample List</h4>
-        <Link to="/CaneChair" className="btn btn-outline-primary btn-sm my-3" >Add New Chair </Link>
+        <Link to="/Sample/CaneChair" className="btn btn-outline-primary btn-sm my-3" >Add New Chair </Link>
         <CaneChairList
           CaneChairArray={this.state.CaneChairArray}
           onCaneChairDelete={this.onCaneChairDelete}
@@ -36,6 +35,7 @@ class CaneChairManagement extends React.Component<ThisPropsType, ThisStateType> 
 
   componentDidMount() {
     //
+    this.props.actions.getAllCaneChair();
   }
 
   componentWillReceiveProps(nextProps: StateToPropsType) {
@@ -46,7 +46,6 @@ class CaneChairManagement extends React.Component<ThisPropsType, ThisStateType> 
     //
   }
 
-  // Build in delete function, remove it if not needed.
   onCaneChairDelete = (CaneChair: CaneChairModel) => {
     this.props.actions.deleteCaneChair(CaneChair)
       .then(() => {

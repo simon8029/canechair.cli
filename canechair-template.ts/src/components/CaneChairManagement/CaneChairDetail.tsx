@@ -34,7 +34,7 @@ class CaneChairDetail extends React.Component<ThisPropsType, ThisStateType> {
       <div className="container mt-3">
         <form onSubmit={this.onFormSubmit}>
           <div id="" className="">
-            <input type="button" className="btn btn-outline-warning btn-sm" onClick={() => { this.props.history.push('/CaneChairs'); }} value={'<= Go Back'} />
+            <input type="button" className="btn btn-outline-warning btn-sm" onClick={() => { this.props.history.push('/Sample'); }} value={'<= Go Back'} />
             <input
               type="submit"
               className="btn btn-outline-success btn-sm mx-1 float-right"
@@ -93,8 +93,6 @@ class CaneChairDetail extends React.Component<ThisPropsType, ThisStateType> {
   }
 
   componentWillReceiveProps(nextProps: StateToPropsType) {
-    console.log(`nextProps:`);
-    console.log(nextProps);
     // Set current selected CaneChair to state
     if (nextProps.currentCaneChair !== undefined) {
       this.setState({
@@ -159,7 +157,7 @@ class CaneChairDetail extends React.Component<ThisPropsType, ThisStateType> {
   redirectToCaneChairsComponent() {
     this.setState({ isFormSaving: false });
     toastr.success(this.state.isNewCaneChair ? 'New CaneChair added.' : 'CaneChair updated.');
-    this.props.history.push('/CaneChairs');
+    this.props.history.push('/Sample');
   }
 
   catchError(error: string) {
