@@ -1,5 +1,6 @@
 # Change Log
 
+##### [0.6.3 ] Remove readme and license from template. #28
 ##### [0.6.2 ] Close issue #27
 * Add AppBar to the sampe pages (#27)
 ##### [0.5.2 ] Close issue #25
