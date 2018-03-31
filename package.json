@@ -1,5 +1,5 @@
 {
-  "version": "0.6.2",
+  "version": "0.6.3",
   "main": "index.js",
   "bin": "bin/cli.js",
   "name": "canechair-cli",
@@ -8,6 +8,14 @@
   "scripts": {
     "build-source": "node bin/build.js"
   },
+  "keywords": [
+    "react",
+    "starter",
+    "typescript",
+    "redux",
+    "router",
+    "webpack"
+  ],
   "license": "MIT",
   "dependencies": {
     "chalk": "^1.1.3",
