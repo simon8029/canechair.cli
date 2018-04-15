@@ -1,5 +1,7 @@
 # Change Log
 
+##### [0.6.4 ] Fix the issue of #29
+* Sample component: Detail button inside the list doesn't work.
 ##### [0.6.3 ] Remove readme and license from template. #28
 ##### [0.6.2 ] Close issue #27
 * Add AppBar to the sampe pages (#27)

@@ -18,7 +18,7 @@ const CaneChairList = (props: CaneChairListProps) => {
     {
       Header: '',
       id: 'btn_details',
-      Cell: (d: any) => <Link to={`/CaneChair/${d.original.id}`} className="btn btn-outline-success btn-sm mx-1" > Details</Link>,
+      Cell: (d: any) => <Link to={`/Sample/CaneChair/${d.original.id}`} className="btn btn-outline-success btn-sm mx-1" > Details</Link>,
       filterable: false,
       maxWidth: 75
     },
