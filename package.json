@@ -1,35 +1,34 @@
 {
-  "version": "0.6.4",
-  "main": "index.js",
-  "bin": "bin/cli.js",
-  "name": "canechair-cli",
-  "author": "Simon X.L.",
-  "description": "",
-  "scripts": {
-    "build-source": "node bin/build.js"
-  },
-  "keywords": [
-    "react",
-    "starter",
-    "typescript",
-    "redux",
-    "router",
-    "webpack"
-  ],
-  "license": "MIT",
-  "dependencies": {
-    "chalk": "^1.1.3",
-    "commander": "^2.9.0",
-    "cross-spawn": "^5.1.0",
-    "figlet": "^1.2.0",
-    "shelljs": "^0.7.7"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/simon8029/canechair.cli.git"
-  },
-  "bugs": {
-    "url": "https://github.com/simon8029/canechair.cli/issues"
-  },
-  "homepage": "https://github.com/simon8029/canechair.cli#readme"
+	"version": "0.7.0",
+	"bin": {
+		"ccc": "bin/index.js"
+	},
+	"name": "canechair-cli",
+	"author": "Simon X.L.",
+	"description": "",
+	"keywords": [
+		"react",
+		"starter",
+		"typescript",
+		"redux",
+		"router",
+		"webpack",
+		"Thunk"
+	],
+	"license": "MIT",
+	"dependencies": {
+		"colors": "^1.3.0",
+		"commander": "^2.16.0",
+		"inquirer": "^6.0.0",
+		"pad": "^2.1.0",
+		"rootpath": "^0.1.2"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/simon8029/canechair.cli.git"
+	},
+	"bugs": {
+		"url": "https://github.com/simon8029/canechair.cli/issues"
+	},
+	"homepage": "https://github.com/simon8029/canechair.cli#readme"
 }

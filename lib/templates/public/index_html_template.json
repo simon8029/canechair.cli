@@ -1,0 +1,32 @@
+{
+	"type": "common",
+	"folder": "public",
+	"fileName": "index",
+	"extension": "html",
+	"surffix": "",
+	"content": [
+		"<!DOCTYPE html>",
+		"\n<html lang=\"en\">",
+		"\n",
+		"\n<head>",
+		"\n\t<meta charset=\"utf-8\">",
+		"\n\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1, shrink-to-fit=no\">",
+		"\n",
+		"\n\t<link rel=\"manifest\" href=\"%PUBLIC_URL%/manifest.json\">",
+		"\n\t<link rel=\"shortcut icon\" href=\"%PUBLIC_URL%/favicon.ico\">",
+		"\n",
+		"\n\t<title>___appName___</title>",
+		"\n</head>",
+		"\n",
+		"\n<body>",
+		"\n\t<noscript>",
+		"\n\t\tYou need to enable JavaScript to run this app.",
+		"\n\t</noscript>",
+		"\n\t<div id=\"root\"></div>",
+		"\n",
+		"\n</body>",
+		"\n",
+		"\n</html>",
+		""
+	]
+}

@@ -1,0 +1,7 @@
+export class ${__ComponentName__}Model {
+  id: string;
+  ${__ComponentName__}Name: string;
+  ${__ComponentName__}Description: string;
+}
+
+export default ${__ComponentName__}Model;
