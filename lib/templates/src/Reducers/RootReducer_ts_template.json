@@ -1,0 +1,17 @@
+{
+	"type": "common",
+	"folder": "src/Reducers/",
+	"fileName": "RootReducer",
+	"extension": ".ts",
+	"surffix": "",
+	"content": [
+		"import { combineReducers } from 'redux';",
+		"\nimport { ___componentName___Reducer } from './___componentName___Reducer';",
+		"\n",
+		"\nconst rootReducer = combineReducers({",
+		"\n  ___componentName___Module: ___componentName___Reducer",
+		"\n});",
+		"\n",
+		"\nexport default rootReducer;"
+	]
+}

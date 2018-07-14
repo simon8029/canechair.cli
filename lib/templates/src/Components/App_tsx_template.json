@@ -1,6 +1,6 @@
 {
 	"type": "common",
-	"folder": "Component/",
+	"folder": "src/Component/",
 	"fileName": "App",
 	"extension": ".tsx",
 	"surffix": "",

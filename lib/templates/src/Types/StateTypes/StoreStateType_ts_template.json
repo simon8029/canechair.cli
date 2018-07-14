@@ -1,0 +1,16 @@
+{
+	"type": "common",
+	"folder": "src/Types/StateTypes/",
+	"fileName": "StoreStateType",
+	"extension": ".ts",
+	"surffix": "",
+	"content": [
+		"import ___componentName___StateType from 'Types/StateTypes/___componentName___StateType';",
+		"\n",
+		"\nexport type StoreStateType = {",
+		"\n\t___componentName___Module: ___componentName___StateType;",
+		"\n};",
+		"\n",
+		"\nexport default StoreStateType;"
+	]
+}

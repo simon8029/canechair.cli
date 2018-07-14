@@ -1,7 +1,0 @@
-import CaneChairStateType from 'Types/StateTypes/CaneChairStateType';
-
-export type StoreStateType = {
-  CaneChairModule: CaneChairStateType;
-};
-
-export default StoreStateType;
