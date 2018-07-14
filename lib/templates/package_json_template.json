@@ -2,7 +2,7 @@
 	"type": "common",
 	"folder": "",
 	"fileName": "package",
-	"extension": "json",
+	"extension": ".json",
 	"surffix": "",
 	"content": [
 		"{",

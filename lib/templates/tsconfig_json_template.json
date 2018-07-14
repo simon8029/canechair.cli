@@ -2,7 +2,7 @@
 	"type": "common",
 	"folder": "",
 	"fileName": "tsconfig",
-	"extension": "json",
+	"extension": ".json",
 	"surffix": "",
 	"content": [
 		"{",

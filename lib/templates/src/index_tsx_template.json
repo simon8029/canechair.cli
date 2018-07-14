@@ -2,7 +2,7 @@
 	"type": "common",
 	"folder": "src/",
 	"fileName": "index",
-	"extension": "tsx",
+	"extension": ".tsx",
 	"surffix": "",
 	"content": [
 		"import App from 'Components/App';",

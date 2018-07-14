@@ -5,6 +5,7 @@ const inquirer = require('inquirer');
 const rimraf = require('rimraf');
 
 // const { types } = require('./values');
+const gen_editorconfig = require('gen/common/gen_editorconfig');
 const gen_package_json = require('gen/common/gen_package_json');
 const gen_tsconfig_json = require('gen/common/gen_tsconfig_json');
 const gen_tslint_json = require('gen/common/gen_tslint_json');
@@ -36,6 +37,9 @@ module.exports = function() {
 	rimraf(`${currentWorkingFolder}/*`, function() {});
 
 	inquirer.prompt(questions).then(function(answers) {
+		// Generate .editorconfig file
+		gen_editorconfig(answers.appName);
+
 		// Generate package.json file
 		gen_package_json(answers.appName);
 
@@ -55,7 +59,7 @@ module.exports = function() {
 		gen_app_tsx(answers.componentName);
 
 		// // Generate Store.ts
-		// gen_store_ts();
+		gen_store_ts();
 
 		// Generate RootReducer.ts
 		// gen_root_reducer_ts();

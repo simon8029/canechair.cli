@@ -38,9 +38,14 @@ module.exports = function(template, appName, componentName) {
 	// Prepare the file's Fully Qualified Name
 	switch (template.type) {
 		case 'common':
-			fileFullyQualifiedName = `${fileFolder}${template.fileName}.${
+			fileFullyQualifiedName = `${fileFolder}${template.fileName}${
 				template.extension
 			}`;
+			break;
+		case 'component':
+			fileFullyQualifiedName = `${fileFolder}${componentName}${
+				template.surffix
+			}.${template.extension}`;
 			break;
 
 		default:

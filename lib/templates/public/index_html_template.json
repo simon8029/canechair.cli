@@ -2,7 +2,7 @@
 	"type": "common",
 	"folder": "public/",
 	"fileName": "index",
-	"extension": "html",
+	"extension": ".html",
 	"surffix": "",
 	"content": [
 		"<!DOCTYPE html>",

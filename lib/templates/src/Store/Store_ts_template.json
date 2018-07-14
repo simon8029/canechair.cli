@@ -1,0 +1,29 @@
+{
+	"type": "common",
+	"folder": "src/Store/",
+	"fileName": "Store",
+	"extension": ".ts",
+	"surffix": "",
+	"content": [
+		"import rootReducer from 'Reducers/RootReducer';",
+		"\nimport { applyMiddleware, createStore } from 'redux';",
+		"\nimport { composeWithDevTools } from 'redux-devtools-extension';",
+		"\nimport Thunk from 'redux-thunk';",
+		"\n// import createHistory from 'history/createBrowserHistory';",
+		"\n// import { routerMiddleware } from 'react-router-redux';",
+		"\n",
+		"\n// export const history = createHistory();",
+		"\n",
+		"\nconst Store = createStore(",
+		"\n\trootReducer,",
+		"\n\tcomposeWithDevTools(",
+		"\n\t\tapplyMiddleware(",
+		"\n\t\t\tThunk",
+		"\n\t\t\t// routerMiddleware(history)",
+		"\n\t\t)",
+		"\n\t)",
+		"\n);",
+		"\n",
+		"\nexport default Store;"
+	]
+}
