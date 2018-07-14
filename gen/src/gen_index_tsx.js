@@ -1,18 +1,9 @@
 require('rootpath')();
+const generator = require('gen/common/generator');
 
-const fs = require('fs');
-const colors = require('colors');
+let index_tsx_template = require('lib/templates/src/index_tsx_template.json');
 
-const { index_js } = require('lib/templates/src/index.js');
-
-const srcFolder = 'src';
-
-module.exports = function() {
-	if (!fs.existsSync(srcFolder)) {
-		fs.mkdirSync(srcFolder);
-	}
-	fs.writeFile('src/index.tsx', index_js, (err) => {
-		if (err) throw err;
-		console.log(colors.green(`index.tsx`) + ` generated.`);
-	});
+module.exports = function(componentName) {
+	console.log(`componentName:`, componentName);
+	generator(index_tsx_template, '', componentName);
 };

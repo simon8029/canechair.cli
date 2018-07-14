@@ -1,6 +1,6 @@
 {
 	"type": "common",
-	"folder": "public",
+	"folder": "public/",
 	"fileName": "index",
 	"extension": "html",
 	"surffix": "",

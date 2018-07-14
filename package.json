@@ -21,6 +21,7 @@
 		"commander": "^2.16.0",
 		"inquirer": "^6.0.0",
 		"pad": "^2.1.0",
+		"rimraf": "^2.6.2",
 		"rootpath": "^0.1.2"
 	},
 	"repository": {

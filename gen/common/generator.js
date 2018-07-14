@@ -38,7 +38,7 @@ module.exports = function(template, appName, componentName) {
 	// Prepare the file's Fully Qualified Name
 	switch (template.type) {
 		case 'common':
-			fileFullyQualifiedName = `${fileFolder}/${template.fileName}.${
+			fileFullyQualifiedName = `${fileFolder}${template.fileName}.${
 				template.extension
 			}`;
 			break;
@@ -55,6 +55,6 @@ module.exports = function(template, appName, componentName) {
 	// Generate file
 	fs.writeFile(fileFullyQualifiedName, replacedContent, (err) => {
 		if (err) throw err;
-		console.log(colors.green(``) + ` generated.`);
+		console.log(colors.green(fileFullyQualifiedName) + ` generated.`);
 	});
 };
