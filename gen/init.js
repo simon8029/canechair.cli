@@ -23,6 +23,8 @@ const src_Reducers_ComponentReducer_ts_template = require('lib/templates/src/Red
 const src_Actions_Interfaces_IComponentAction_ts_template = require('lib/templates/src/Actions/Interfaces/IComponentAction_ts_template.json');
 const src_Actions_ComponentAction_ts_template = require('lib/templates/src/Actions/ComponentAction_ts_template.json');
 const src_Services_ComponentService_ts_template = require('lib/templates/src/Services/ComponentService_ts_template.json');
+const src_Components_Common_CCTextField_tsx_template = require('lib/templates/src/Components/Common/CCTextField_tsx_template.json');
+const src_Components_Common_FourOhFour_tsx_template = require('lib/templates/src/Components/Common/FourOhFour_tsx_template.json');
 
 const questions = [
 	{
@@ -88,60 +90,66 @@ module.exports = function() {
 		//  Generate Settings/Path.ts
 		generator(src_Settings_Path_ts_template);
 
+		// Generate Components/Common/CCTextField.tsx file
+		generator(src_Components_Common_CCTextField_tsx_template);
+
+		// Generate Components/Common/FourOhFour.tsx file
+		generator(src_Components_Common_FourOhFour_tsx_template);
+
 		// #endregion [REGION_CODE_GOLD] Generate Common Files
 
-		// #region [REGION_CODE_BLUE] Generate Dynamic Files
+		// // #region [REGION_CODE_BLUE] Generate Dynamic Files
 
-		// Generate [ComponentName]StateType.ts
-		generator(
-			src_Types_StateTypes_ComponentStateType_ts_template,
-			'',
-			answers.componentName
-		);
+		// // Generate [ComponentName]StateType.ts
+		// generator(
+		// 	src_Types_StateTypes_ComponentStateType_ts_template,
+		// 	'',
+		// 	answers.componentName
+		// );
 
-		// Generate [ComponentName]ModelType.ts
-		generator(
-			src_Types_ModelTypes_ComponentModelType_ts_template,
-			'',
-			answers.componentName
-		);
+		// // Generate [ComponentName]ModelType.ts
+		// generator(
+		// 	src_Types_ModelTypes_ComponentModelType_ts_template,
+		// 	'',
+		// 	answers.componentName
+		// );
 
-		// Generate [ComponentName]ActionType.ts
-		generator(
-			src_Types_ActionTypes_ComponentActionType_ts_template,
-			'',
-			answers.componentName
-		);
+		// // Generate [ComponentName]ActionType.ts
+		// generator(
+		// 	src_Types_ActionTypes_ComponentActionType_ts_template,
+		// 	'',
+		// 	answers.componentName
+		// );
 
-		// Generate [ComponentName]Reducer.ts
-		generator(
-			src_Reducers_ComponentReducer_ts_template,
-			'',
-			answers.componentName
-		);
+		// // Generate [ComponentName]Reducer.ts
+		// generator(
+		// 	src_Reducers_ComponentReducer_ts_template,
+		// 	'',
+		// 	answers.componentName
+		// );
 
-		// Generate I[ComponentName]ActionInterface.ts
-		generator(
-			src_Actions_Interfaces_IComponentAction_ts_template,
-			'',
-			answers.componentName
-		);
+		// // Generate I[ComponentName]ActionInterface.ts
+		// generator(
+		// 	src_Actions_Interfaces_IComponentAction_ts_template,
+		// 	'',
+		// 	answers.componentName
+		// );
 
-		// Generate [ComponentName]Actions.ts
-		generator(
-			src_Actions_ComponentAction_ts_template,
-			'',
-			answers.componentName
-		);
+		// // Generate [ComponentName]Actions.ts
+		// generator(
+		// 	src_Actions_ComponentAction_ts_template,
+		// 	'',
+		// 	answers.componentName
+		// );
 
-		// Generate [ComponentName]Services.ts
-		generator(
-			src_Services_ComponentService_ts_template,
-			'',
-			answers.componentName
-		);
+		// // Generate [ComponentName]Services.ts
+		// generator(
+		// 	src_Services_ComponentService_ts_template,
+		// 	'',
+		// 	answers.componentName
+		// );
 
-		// #endregion [REGION_CODE_BLUE] Generate Dynamic Files
+		// // #endregion [REGION_CODE_BLUE] Generate Dynamic Files
 
 		// Generate Sample Components
 		// gen_component_sample(answers.ComponentName);

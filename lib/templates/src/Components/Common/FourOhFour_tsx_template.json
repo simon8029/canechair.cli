@@ -1,0 +1,18 @@
+{
+	"type": "common",
+	"folder": "src/Components/Common/",
+	"fileName": "FourOhFour",
+	"extension": ".tsx",
+	"prefix": "",
+	"surffix": "",
+	"content": [
+		"import * as React from 'react';",
+		"\n",
+		"\nconst FourOhFour = () => {",
+		"\n\treturn <div>FourOhFour working.</div>;",
+		"\n};",
+		"\n",
+		"\nexport default FourOhFour;",
+		"\n"
+	]
+}
