@@ -3,6 +3,7 @@
 	"folder": "",
 	"fileName": "package",
 	"extension": ".json",
+	"prefix": "",
 	"surffix": "",
 	"content": [
 		"{",

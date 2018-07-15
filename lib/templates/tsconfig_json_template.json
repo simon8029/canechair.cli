@@ -3,6 +3,7 @@
 	"folder": "",
 	"fileName": "tsconfig",
 	"extension": ".json",
+	"prefix": "",
 	"surffix": "",
 	"content": [
 		"{",

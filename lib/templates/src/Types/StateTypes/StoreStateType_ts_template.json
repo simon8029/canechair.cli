@@ -3,6 +3,7 @@
 	"folder": "src/Types/StateTypes/",
 	"fileName": "StoreStateType",
 	"extension": ".ts",
+	"prefix": "",
 	"surffix": "",
 	"content": [
 		"import ___componentName___StateType from 'Types/StateTypes/___componentName___StateType';",

@@ -3,6 +3,7 @@
 	"folder": "",
 	"fileName": ".editorconfig",
 	"extension": "",
+	"prefix": "",
 	"surffix": "",
 	"content": [
 		"root = true",

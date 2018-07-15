@@ -3,6 +3,7 @@
 	"folder": "public/",
 	"fileName": "index",
 	"extension": ".html",
+	"prefix": "",
 	"surffix": "",
 	"content": [
 		"<!DOCTYPE html>",

@@ -16,10 +16,10 @@ module.exports = function(template, appName, componentName) {
 				template.extension
 			}`;
 			break;
-		case 'component':
-			fileFullyQualifiedName = `${fileFolder}${componentName}${
-				template.surffix
-			}.${template.extension}`;
+		case 'dynamic':
+			fileFullyQualifiedName = `${fileFolder}${
+				template.prefix
+			}${componentName}${template.surffix}${template.extension}`;
 			break;
 
 		default:

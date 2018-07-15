@@ -3,21 +3,7 @@ require('rootpath')();
 const colors = require('colors');
 const inquirer = require('inquirer');
 const fs = require('fs-extra');
-const generator = require('gen/common/generator');
-
-// const { types } = require('./values');
-// const gen_editorconfig = require('gen/common/gen_editorconfig');
-// const gen_package_json = require('gen/common/gen_package_json');
-// const gen_tsconfig_json = require('gen/common/gen_tsconfig_json');
-// const gen_tslint_json = require('gen/common/gen_tslint_json');
-// const gen_public_index_html = require('gen/public/gen_public_index_html');
-// const gen_index_tsx = require('gen/src/gen_index_tsx');
-// const gen_app_tsx = require('gen/src/Components/gen_app_tsx');
-// const gen_Store_ts = require('gen/src/Store/gen_Store_ts');
-// const gen_RootReducer_ts = require('gen/src/Reducers/gen_RootReducer_ts');
-// const gen_StoreStateType_ts = require('gen/src/Types/StateTypes/gen_StoreStateType_ts');
-// const gen_Settings_Path_ts = require('gen/common/gen_Settings_Path_ts');
-// const gen_component_sample = require('./src/Components/gen_component_sample');
+const generator = require('gen/generator');
 
 const editorconfig_template = require('lib/templates/editorconfig_template.json');
 const package_json_template = require('lib/templates/package_json_template.json');
@@ -28,8 +14,15 @@ const src_index_tsx_template = require('lib/templates/src/index_tsx_template.jso
 const src_Components_app_tsx_template = require('lib/templates/src/Components/App_tsx_template.json');
 const src_Store_ts_template = require('lib/templates/src/Store/Store_ts_template.json');
 const src_Reducers_RootReducer_ts_template = require('lib/templates/src/Reducers/RootReducer_ts_template.json');
-let src_Types_StateTypes_StoreStateType_ts_template = require('lib/templates/src/Types/StateTypes/StoreStateType_ts_template.json');
+const src_Types_StateTypes_StoreStateType_ts_template = require('lib/templates/src/Types/StateTypes/StoreStateType_ts_template.json');
 const src_Settings_Path_ts_template = require('lib/templates/src/Settings/Path_ts_template.json');
+const src_Types_StateTypes_ComponentStateType_ts_template = require('lib/templates/src/Types/StateTypes/ComponentStateType_ts_template.json');
+const src_Types_ModelTypes_ComponentModelType_ts_template = require('lib/templates/src/Types/ModelTypes/ComponentModelType_ts_template.json');
+const src_Types_ActionTypes_ComponentActionType_ts_template = require('lib/templates/src/Types/ActionTypes/ComponentActionType_ts_template.json');
+const src_Reducers_ComponentReducer_ts_template = require('lib/templates/src/Reducers/ComponentReducer_ts_template.json');
+const src_Actions_Interfaces_IComponentAction_ts_template = require('lib/templates/src/Actions/Interfaces/IComponentAction_ts_template.json');
+const src_Actions_ComponentAction_ts_template = require('lib/templates/src/Actions/ComponentAction_ts_template.json');
+const src_Services_ComponentService_ts_template = require('lib/templates/src/Services/ComponentService_ts_template.json');
 
 const questions = [
 	{
@@ -98,20 +91,59 @@ module.exports = function() {
 		// #endregion [REGION_CODE_GOLD] Generate Common Files
 
 		// #region [REGION_CODE_BLUE] Generate Dynamic Files
+
 		// Generate [ComponentName]StateType.ts
+		generator(
+			src_Types_StateTypes_ComponentStateType_ts_template,
+			'',
+			answers.componentName
+		);
+
 		// Generate [ComponentName]ModelType.ts
+		generator(
+			src_Types_ModelTypes_ComponentModelType_ts_template,
+			'',
+			answers.componentName
+		);
+
 		// Generate [ComponentName]ActionType.ts
+		generator(
+			src_Types_ActionTypes_ComponentActionType_ts_template,
+			'',
+			answers.componentName
+		);
 
 		// Generate [ComponentName]Reducer.ts
+		generator(
+			src_Reducers_ComponentReducer_ts_template,
+			'',
+			answers.componentName
+		);
 
 		// Generate I[ComponentName]ActionInterface.ts
+		generator(
+			src_Actions_Interfaces_IComponentAction_ts_template,
+			'',
+			answers.componentName
+		);
 
 		// Generate [ComponentName]Actions.ts
+		generator(
+			src_Actions_ComponentAction_ts_template,
+			'',
+			answers.componentName
+		);
 
 		// Generate [ComponentName]Services.ts
+		generator(
+			src_Services_ComponentService_ts_template,
+			'',
+			answers.componentName
+		);
+
+		// #endregion [REGION_CODE_BLUE] Generate Dynamic Files
 
 		// Generate Sample Components
 		// gen_component_sample(answers.ComponentName);
-		// #endregion [REGION_CODE_BLUE] Generate Dynamic Files
 	});
 };

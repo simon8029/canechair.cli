@@ -3,6 +3,7 @@
 	"folder": "src/Store/",
 	"fileName": "Store",
 	"extension": ".ts",
+	"prefix": "",
 	"surffix": "",
 	"content": [
 		"import rootReducer from 'Reducers/RootReducer';",

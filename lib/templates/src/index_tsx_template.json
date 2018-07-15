@@ -3,6 +3,7 @@
 	"folder": "src/",
 	"fileName": "index",
 	"extension": ".tsx",
+	"prefix": "",
 	"surffix": "",
 	"content": [
 		"import App from 'Components/App';",
