@@ -6,8 +6,8 @@
 	"prefix": "",
 	"surffix": "",
 	"content": [
-		"import ___componentName___Details from 'Components/Sample/___componentName___Details';",
-		"\nimport ___componentName___Main from 'Components/Sample/___componentName___Main';",
+		"import ___componentName___Details from 'Components/___componentName___Details';",
+		"\nimport ___componentName___Main from 'Components/___componentName___Main';",
 		"\nimport * as React from 'react';",
 		"\nimport { connect } from 'react-redux';",
 		"\nimport { Route, Switch } from 'react-router';",

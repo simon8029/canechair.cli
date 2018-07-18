@@ -4,7 +4,7 @@ const program = require('commander');
 
 // import function to list coffeee menu
 const init = require('../gen/init');
-const gen_new = require('../gen/gen_new');
+const gen_new_component = require('../gen/gen_new_component');
 
 // import function to order a coffee
 // const order = require('../lib/order');
@@ -28,7 +28,7 @@ program
 
 	// function to execute when command is uses
 	.action(function() {
-		gen_new();
+		gen_new_component();
 	});
 
 // allow commander to parse `process.argv`

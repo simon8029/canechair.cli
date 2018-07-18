@@ -25,6 +25,7 @@ const src_Actions_ComponentAction_ts_template = require('lib/templates/src/Actio
 const src_Services_ComponentService_ts_template = require('lib/templates/src/Services/ComponentService_ts_template.json');
 const src_Components_Common_CCTextField_tsx_template = require('lib/templates/src/Components/Common/CCTextField_tsx_template.json');
 const src_Components_Common_FourOhFour_tsx_template = require('lib/templates/src/Components/Common/FourOhFour_tsx_template.json');
+const src_Services_delay_tsx_template = require('lib/templates/src/Services/delay_tsx_template.json');
 
 const questions = [
 	{
@@ -95,6 +96,9 @@ module.exports = function() {
 
 		// Generate Components/Common/FourOhFour.tsx file
 		generator(src_Components_Common_FourOhFour_tsx_template);
+
+		// Generate Services/delay.ts file
+		generator(src_Services_delay_tsx_template);
 
 		// #endregion [REGION_CODE_GOLD] Generate Common Files
 

@@ -1,0 +1,9 @@
+{
+	"type": "common",
+	"folder": "src/Services/",
+	"fileName": "delay",
+	"extension": ".ts",
+	"prefix": "",
+	"surffix": "",
+	"content": ["export default 0;"]
+}

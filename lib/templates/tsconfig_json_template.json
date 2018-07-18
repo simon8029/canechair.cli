@@ -32,9 +32,8 @@
 		"\n\t\t\"scripts\",",
 		"\n\t\t\"acceptance-tests\",",
 		"\n\t\t\"webpack\",",
-		"\n\t\t\"jest\",",
+		"\n\t\t\"jest\"",
 		"\n\t]",
-		"\n}",
-		""
+		"\n}"
 	]
 }
