@@ -33,12 +33,6 @@ const questions = [
 		name: 'appName',
 		message: 'App Name:'
 		// 	default: false
-	},
-	{
-		type: 'input',
-		name: 'componentName',
-		message: 'Component Name:'
-		// 	default: false
 	}
 ];
 

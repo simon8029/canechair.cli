@@ -6,12 +6,20 @@
 	"prefix": "",
 	"surffix": "",
 	"content": [
-		"import ___componentName___StateType from 'Types/StateTypes/___componentName___StateType';",
+		"// #region [REGION_CODE_BLUE] import block",
+		"\n// #endregion [REGION_CODE_BLUE] import block",
 		"\n",
 		"\nexport type StoreStateType = {",
-		"\n\t___componentName___Module: ___componentName___StateType;",
+		"\n// #region [REGION_CODE_GOLD] statement block",
+		"\n// #endregion [REGION_CODE_GOLD] statement block",
 		"\n};",
 		"\n",
 		"\nexport default StoreStateType;"
+	],
+	"importBlock": [
+		"import ___componentName___StateType from 'Types/StateTypes/___componentName___StateType';"
+	],
+	"statementBlock": [
+		"\t___componentName___Module: ___componentName___StateType;"
 	]
 }

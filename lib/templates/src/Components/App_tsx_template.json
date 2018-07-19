@@ -6,16 +6,15 @@
 	"prefix": "",
 	"surffix": "",
 	"content": [
-		"import ___componentName___Details from 'Components/___componentName___Details';",
-		"\nimport ___componentName___Main from 'Components/___componentName___Main';",
+		"// #region [REGION_CODE_BLUE] import block",
 		"\nimport * as React from 'react';",
 		"\nimport { connect } from 'react-redux';",
 		"\nimport { Route, Switch } from 'react-router';",
 		"\nimport { RouteComponentProps, withRouter } from 'react-router-dom';",
 		"\n// import { Dispatch } from 'redux';",
-		"\n// import { I___componentName___StateInterface } from 'Types/StateTypes/___componentName___StateType';",
 		"\nimport { StoreStateType } from 'Types/StateTypes/StoreStateType';",
 		"\n// import * as StylesVariable from 'Styles/_variables';",
+		"\n// #endregion [REGION_CODE_BLUE] import block",
 		"\n",
 		"\nclass App extends React.Component<ThisPropsType, StoreStateType> {",
 		"\n\tconstructor(props: ThisPropsType) {",
@@ -51,7 +50,8 @@
 		"\n",
 		"\nfunction mapStateToProps(state: StoreStateType): StoreStateType {",
 		"\n\treturn {",
-		"\n\t\t___componentName___Module: state.___componentName___Module",
+		"\n// #region [REGION_CODE_GOLD] mapStateToProps block",
+		"\n// #endregion [REGION_CODE_GOLD] mapStateToProps block",
 		"\n\t};",
 		"\n}",
 		"\n// function mapDispatchToProps(dispatch: Dispatch<any>): IDispatchToProps {",
@@ -73,5 +73,15 @@
 		"\n\t\t// mapDispatchToProps",
 		"\n\t)(App)",
 		"\n);"
+	],
+	"importBlock": [
+		"import ___componentName___StateType from 'Types/StateTypes/___componentName___StateType';",
+		"\n//import { I___componentName___StateInterface } from 'Types/StateTypes/___componentName___StateType';"
+	],
+	"statementBlock": [
+		"\t___componentName___Module: ___componentName___StateType;"
+	],
+	"mapStateToPropsBlock": [
+		",\n\t___componentName___Module: state.___componentName___Module"
 	]
 }

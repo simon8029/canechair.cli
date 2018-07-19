@@ -18,13 +18,18 @@
 		"\n\t<Provider store={Store}>",
 		"\n\t\t<BrowserRouter>",
 		"\n\t\t\t<Switch>",
+		"{/* Router Block Start*/}",
 		"\n\t\t\t\t<Redirect exact={true} from=\"/\" to=\"/Sample/___componentName___\" />",
 		"\n\t\t\t\t<Route path=\"/Sample\" component={App} />",
 		"\n\t\t\t\t<Route path=\"\" component={FourOhFour} />",
+		"{/* Router Block End*/}",
 		"\n\t\t\t</Switch>",
 		"\n\t\t</BrowserRouter>",
 		"\n\t</Provider>,",
 		"\n\tdocument.getElementById('root') as HTMLElement",
 		"\n);"
+	],
+	"BlockTemplate_Root_Index_tsx_RouteBlock": [
+		"\n\t\t\t\t<Route path=\"/___componentName___\" component={___componentName___Main} />"
 	]
 }

@@ -3,91 +3,83 @@
 const fs = require('fs-extra');
 const colors = require('colors');
 
-module.exports = function(
-	template_import_block,
-	template_statement_block,
-	componentName
-) {
+module.exports = function (template, componentName) {
 	let fileFolder = `${process.cwd()}/${template.folder}`;
-	let fileFullyQualifiedName = '';
-	let content = template.content.join('');
+	let joinedTemplateContent_importBlock =
+		template.importBlock && template.importBlock.join('');
+	let joinedTemplateContent_statementBlock =
+		template.statementBlock && template.statementBlock.join('');
+	let joinedTemplateContent_mapStateToPropsBlock =
+		template.mapStateToPropsBlock && template.mapStateToPropsBlock.join('');
 
-	// Create folder if not exists
-	fs.ensureDirSync(fileFolder);
+	// This only happens in root index.tsx file
+	let joinedTemplateContent_BlockTemplate_Root_Index_tsx_RouteBlock =
+		template.BlockTemplate_Root_Index_tsx_RouteBlock &&
+		template.BlockTemplate_Root_Index_tsx_RouteBlock.join('');
 
 	// Prepare the file's Fully Qualified Name
-	console.log(colors.red(`template.type:`, template.type));
-	const fileAbsolutePath = `${process.cwd()}/${template.fileRelativePath}`;
+	const fileAbsolutePath = `${process.cwd()}/${template.folder}${
+		template.fileName
+		}${template.extension}`;
 	let currentFileContent = fs.readFileSync(fileAbsolutePath).toString();
 	let newFileContent;
-	switch (template.type) {
-		case 'import_block': {
-			let pattern_importBlock = /\/\/ #endregion \[REGION_CODE_BLUE\] import block/g;
 
-			let toBeAddedContent = `${content.replace(
-				/___componentName___/g,
-				componentName
-			)}\n$&`;
+	let regex_pattern_importBlock = /\/\/ #endregion \[REGION_CODE_BLUE\] import block/g;
+	let regex_pattern_statementBlock = /\/\/ #endregion \[REGION_CODE_GOLD\] statement block/g;
+	let regex_pattern_mapStateToPropsBlock = /\/\/ #endregion \[REGION_CODE_GOLD\] mapStateToProps block/g;
+	let regex_pattern_rootIndexRouteBlock = /<Route path=\"\" component={FourOhFour} \/>/;
 
-			newFileContent = currentFileContent.replace(
-				pattern_importBlock,
-				toBeAddedContent
-			);
+	let toBeAddedContent_importBlock = getToBeAddedContent(
+		joinedTemplateContent_importBlock,
+		componentName
+	);
+	let toBeAddedContent_statementBlock = getToBeAddedContent(
+		joinedTemplateContent_statementBlock,
+		componentName
+	);
+	let toBeAddedContent_mapStateToPropsBlock = getToBeAddedContent(
+		joinedTemplateContent_mapStateToPropsBlock,
+		componentName
+	);
+	let toBeAddedContent_RootIndexTsxRouteBlock = getToBeAddedContent(
+		joinedTemplateContent_BlockTemplate_Root_Index_tsx_RouteBlock,
+		componentName
+	);
 
-			// write back to file
-			fs.writeFile(fileAbsolutePath, newFileContent, (err) => {
-				if (err) throw err;
-				console.log(colors.yellow(fileAbsolutePath) + ` updated.`);
-			});
-			break;
-		}
-		case 'statement_block':
-			{
-				// Get current file
-				const fileAbsolutePath = `${process.cwd()}/${
-					template.fileRelativePath
-				}`;
-				let currentFileContent = fs
-					.readFileSync(fileAbsolutePath)
-					.toString();
+	console.log(
+		`toBeAddedContent_RootIndexTsxRouteBlock:`,
+		toBeAddedContent_RootIndexTsxRouteBlock
+	);
+	let re = RegExp(template.RegPattern_Root_Index_tsx_RouteBlock);
+	console.log(
+		`template.RegPattern_Root_Index_tsx_RouteBlock:`,
+		template.RegPattern_Root_Index_tsx_RouteBlock
+	);
+	console.log(
+		colors.blue(`re.test(currentFileContent):`, re.test(currentFileContent))
+	);
 
-				let pattern_statementBlock = /\/\/ #endregion \[REGION_CODE_BLUE\] statement block/g;
+	newFileContent = currentFileContent
+		.replace(regex_pattern_importBlock, toBeAddedContent_importBlock)
+		.replace(regex_pattern_statementBlock, toBeAddedContent_statementBlock)
+		.replace(
+			regex_pattern_mapStateToPropsBlock,
+			toBeAddedContent_mapStateToPropsBlock
+		)
+		.replace(
+			regex_pattern_rootIndexRouteBlock,
+			toBeAddedContent_RootIndexTsxRouteBlock
+		);
 
-				let toBeAddedContent = `${content.replace(
-					/___componentName___/g,
-					componentName
-				)}\n$&`;
+	// write back to file
+	fs.writeFile(fileAbsolutePath, newFileContent, (err) => {
+		if (err) throw err;
+		console.log(colors.yellow(fileAbsolutePath) + ` updated.`);
+	});
+};
 
-				let newFileContent = currentFileContent.replace(
-					pattern_statementBlock,
-					toBeAddedContent
-				);
-				console.log(colors.red(`newFileContent:`, newFileContent));
-				// add new block
-
-				// insert module statement
-
-				// write back to file
-				fs.writeFile(fileAbsolutePath, newFileContent, (err) => {
-					if (err) throw err;
-					console.log(colors.yellow(fileAbsolutePath) + ` updated.`);
-				});
-			}
-			break;
-
-		default:
-			break;
-	}
-
-	// // Replace keywords
-	// let replacedContent = content.replace(
-	// 	/___componentName___/g,
-	// 	componentName
-	// );
-
-	// // Generate file
-	// fs.writeFile(fileFullyQualifiedName, replacedContent, (err) => {
-	// 	if (err) throw err;
-	// 	console.log(colors.green(fileFullyQualifiedName) + ` generated.`);
-	// });
+getToBeAddedContent = (template, componentName) => {
+	if (template)
+		return `${template.replace(/___componentName___/g, componentName)}\n$&`;
+	return '';
 };
