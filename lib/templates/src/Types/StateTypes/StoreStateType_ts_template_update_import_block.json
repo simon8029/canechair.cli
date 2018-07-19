@@ -1,6 +1,7 @@
 {
-	"type": "StoreStateTypes",
+	"type": "import_block",
 	"folder": "src/Types/StateTypes/",
+	"fileRelativePath": "src/Types/StateTypes/StoreStateType.ts",
 	"fileName": "StoreStateType",
 	"extension": ".ts",
 	"prefix": "",

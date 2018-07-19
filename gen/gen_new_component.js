@@ -5,8 +5,8 @@ const inquirer = require('inquirer');
 const fs = require('fs-extra');
 const generator = require('gen/generator');
 const updater = require('gen/updater');
-
-const src_Types_StateTypes_StoreStateType_ts_template_update_import = require('src/Types/StateTypes/StoreStateType_ts_template_update_import');
+const src_Types_StateTypes_StoreStateType_ts_template_update_import_block = require('lib/templates/src/Types/StateTypes/StoreStateType_ts_template_update_import_block.json');
+const src_Types_StateTypes_StoreStateType_ts_template_update_statement_block = require('lib/templates/src/Types/StateTypes/StoreStateType_ts_template_update_statement_block.json');
 // const editorconfig_template = require('lib/templates/editorconfig_template.json');
 // const package_json_template = require('lib/templates/package_json_template.json');
 // const tsconfig_json_template = require('lib/templates/tsconfig_json_template.json');
@@ -44,7 +44,11 @@ module.exports = function() {
 
 		// Update StoreStateType.ts file
 		updater(
-			src_Types_StateTypes_StoreStateType_ts_template_update_import,
+			src_Types_StateTypes_StoreStateType_ts_template_update_import_block,
+			answers.componentName
+		);
+		updater(
+			src_Types_StateTypes_StoreStateType_ts_template_update_statement_block,
 			answers.componentName
 		);
 
