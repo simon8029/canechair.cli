@@ -1,6 +1,6 @@
 {
 	"type": "common",
-	"folder": "src/Types/StateTypes/",
+	"folder": "src/",
 	"fileName": "StoreStateType",
 	"extension": ".ts",
 	"prefix": "",
@@ -16,10 +16,10 @@
 		"\n",
 		"\nexport default StoreStateType;"
 	],
-	"importBlock": [
+	"BlockTemplate_ImportBlock": [
 		"import ___componentName___StateType from 'Types/StateTypes/___componentName___StateType';"
 	],
-	"statementBlock": [
+	"BlockTemplate_StatementBlock": [
 		"\t___componentName___Module: ___componentName___StateType;"
 	]
 }

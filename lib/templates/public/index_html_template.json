@@ -5,6 +5,7 @@
 	"extension": ".html",
 	"prefix": "",
 	"surffix": "",
+	"placeholder": "___appName___",
 	"content": [
 		"<!DOCTYPE html>",
 		"\n<html lang=\"en\">",

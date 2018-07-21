@@ -1,0 +1,18 @@
+{
+	"type": "StateType",
+	"placeholder": "___componentName___",
+
+	"content": [
+		"import { ___componentName___ModelType } from './___componentName___ModelType';",
+		"\n",
+		"\nexport type ___componentName___StateType = {",
+		"\n  ___componentName___: ___componentName___ModelType;",
+		"\n  ___componentName___Array: ___componentName___ModelType[];",
+		"\n  isLoading: boolean;",
+		"\n  error: Error | undefined;",
+		"\n  searchTerm: string;",
+		"\n};",
+		"\n",
+		"\nexport default ___componentName___StateType;"
+	]
+}

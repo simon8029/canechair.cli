@@ -1,6 +1,6 @@
 {
 	"type": "common",
-	"folder": "src/Components/Common/",
+	"folder": "src/CommonComponents/",
 	"fileName": "FourOhFour",
 	"extension": ".tsx",
 	"prefix": "",

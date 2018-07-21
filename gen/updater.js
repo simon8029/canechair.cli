@@ -3,12 +3,20 @@
 const fs = require('fs-extra');
 const colors = require('colors');
 
-module.exports = function (template, componentName) {
-	let fileFolder = `${process.cwd()}/${template.folder}`;
-	let joinedTemplateContent_importBlock =
-		template.importBlock && template.importBlock.join('');
-	let joinedTemplateContent_statementBlock =
-		template.statementBlock && template.statementBlock.join('');
+module.exports = function(template, componentName) {
+	// Prepare the file's Fully Qualified Name
+	const fileAbsolutePath = `${process.cwd()}/${template.folder}${
+		template.fileName
+	}${template.extension}`;
+	let currentFileContent = fs.readFileSync(fileAbsolutePath).toString();
+
+	// Get template of to be replaced content
+	let joinedTemplateContent_BlockTemplate_ImportBlock =
+		template.BlockTemplate_ImportBlock &&
+		template.BlockTemplate_ImportBlock.join('');
+	let joinedTemplateContent_BlockTemplate_StatementBlock =
+		template.BlockTemplate_StatementBlock &&
+		template.BlockTemplate_StatementBlock.join('');
 	let joinedTemplateContent_mapStateToPropsBlock =
 		template.mapStateToPropsBlock && template.mapStateToPropsBlock.join('');
 
@@ -17,24 +25,14 @@ module.exports = function (template, componentName) {
 		template.BlockTemplate_Root_Index_tsx_RouteBlock &&
 		template.BlockTemplate_Root_Index_tsx_RouteBlock.join('');
 
-	// Prepare the file's Fully Qualified Name
-	const fileAbsolutePath = `${process.cwd()}/${template.folder}${
-		template.fileName
-		}${template.extension}`;
-	let currentFileContent = fs.readFileSync(fileAbsolutePath).toString();
 	let newFileContent;
 
-	let regex_pattern_importBlock = /\/\/ #endregion \[REGION_CODE_BLUE\] import block/g;
-	let regex_pattern_statementBlock = /\/\/ #endregion \[REGION_CODE_GOLD\] statement block/g;
-	let regex_pattern_mapStateToPropsBlock = /\/\/ #endregion \[REGION_CODE_GOLD\] mapStateToProps block/g;
-	let regex_pattern_rootIndexRouteBlock = /<Route path=\"\" component={FourOhFour} \/>/;
-
-	let toBeAddedContent_importBlock = getToBeAddedContent(
-		joinedTemplateContent_importBlock,
+	let toBeAddedContent_BlockTemplate_ImportBlock = getToBeAddedContent(
+		joinedTemplateContent_BlockTemplate_ImportBlock,
 		componentName
 	);
-	let toBeAddedContent_statementBlock = getToBeAddedContent(
-		joinedTemplateContent_statementBlock,
+	let toBeAddedContent_BlockTemplate_StatementBlock = getToBeAddedContent(
+		joinedTemplateContent_BlockTemplate_StatementBlock,
 		componentName
 	);
 	let toBeAddedContent_mapStateToPropsBlock = getToBeAddedContent(
@@ -46,22 +44,15 @@ module.exports = function (template, componentName) {
 		componentName
 	);
 
-	console.log(
-		`toBeAddedContent_RootIndexTsxRouteBlock:`,
-		toBeAddedContent_RootIndexTsxRouteBlock
-	);
-	let re = RegExp(template.RegPattern_Root_Index_tsx_RouteBlock);
-	console.log(
-		`template.RegPattern_Root_Index_tsx_RouteBlock:`,
-		template.RegPattern_Root_Index_tsx_RouteBlock
-	);
-	console.log(
-		colors.blue(`re.test(currentFileContent):`, re.test(currentFileContent))
-	);
-
 	newFileContent = currentFileContent
-		.replace(regex_pattern_importBlock, toBeAddedContent_importBlock)
-		.replace(regex_pattern_statementBlock, toBeAddedContent_statementBlock)
+		.replace(
+			regex_pattern_BlockTemplate_ImportBlock,
+			toBeAddedContent_BlockTemplate_ImportBlock
+		)
+		.replace(
+			regex_pattern_BlockTemplate_StatementBlock,
+			toBeAddedContent_BlockTemplate_StatementBlock
+		)
 		.replace(
 			regex_pattern_mapStateToPropsBlock,
 			toBeAddedContent_mapStateToPropsBlock

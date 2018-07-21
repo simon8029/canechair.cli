@@ -1,10 +1,6 @@
 {
-	"type": "dynamic",
-	"folder": "src/Types/ActionTypes/",
-	"fileName": "",
-	"extension": ".ts",
-	"prefix": "",
-	"surffix": "ActionTypes",
+	"type": "ActionType",
+	"placeholder": "___componentName___",
 	"content": [
 		"export const GetAll___componentName___Start: string = 'GetAll___componentName___Start';",
 		"\nexport const GetAll___componentName___Succeeded: string = 'GetAll___componentName___Succeeded';",

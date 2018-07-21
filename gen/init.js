@@ -14,19 +14,20 @@ const src_index_tsx_template = require('lib/templates/src/index_tsx_template.jso
 const src_Components_app_tsx_template = require('lib/templates/src/Components/App_tsx_template.json');
 const src_Store_ts_template = require('lib/templates/src/Store/Store_ts_template.json');
 const src_Reducers_RootReducer_ts_template = require('lib/templates/src/Reducers/RootReducer_ts_template.json');
-const src_Types_StateTypes_StoreStateType_ts_template = require('lib/templates/src/Types/StateTypes/StoreStateType_ts_template.json');
+const src_Types_StoreStateType_ts_template = require('lib/templates/src/Types/StoreStateType_ts_template.json');
 const src_Settings_Path_ts_template = require('lib/templates/src/Settings/Path_ts_template.json');
-const src_Types_StateTypes_ComponentStateType_ts_template = require('lib/templates/src/Types/StateTypes/ComponentStateType_ts_template.json');
-const src_Types_ModelTypes_ComponentModelType_ts_template = require('lib/templates/src/Types/ModelTypes/ComponentModelType_ts_template.json');
-const src_Types_ActionTypes_ComponentActionType_ts_template = require('lib/templates/src/Types/ActionTypes/ComponentActionType_ts_template.json');
-const src_Reducers_ComponentReducer_ts_template = require('lib/templates/src/Reducers/ComponentReducer_ts_template.json');
-const src_Actions_Interfaces_IComponentAction_ts_template = require('lib/templates/src/Actions/Interfaces/IComponentAction_ts_template.json');
-const src_Actions_ComponentAction_ts_template = require('lib/templates/src/Actions/ComponentAction_ts_template.json');
-const src_Services_ComponentService_ts_template = require('lib/templates/src/Services/ComponentService_ts_template.json');
+const src_Types_StateType_ts_template = require('lib/templates/src/Types/StateType_ts_template.json');
+const src_Types_ModelType_ts_template = require('lib/templates/src/Types/ModelType_ts_template.json');
+const src_Types_ActionType_ts_template = require('lib/templates/src/Types/ActionType_ts_template.json');
+const src_Reducers_Reducer_ts_template = require('lib/templates/src/Reducers/Reducer_ts_template.json');
+const src_Actions_Interfaces_IAction_ts_template = require('lib/templates/src/Actions/IAction_ts_template.json');
+const src_Actions_Action_ts_template = require('lib/templates/src/Actions/Action_ts_template.json');
+const src_Services_Service_ts_template = require('lib/templates/src/Services/Service_ts_template.json');
 const src_Components_Common_CCTextField_tsx_template = require('lib/templates/src/Components/Common/CCTextField_tsx_template.json');
 const src_Components_Common_FourOhFour_tsx_template = require('lib/templates/src/Components/Common/FourOhFour_tsx_template.json');
-const src_Services_delay_tsx_template = require('lib/templates/src/Services/delay_tsx_template.json');
+const src_Settings_delay_tsx_template = require('lib/templates/src/Settings/delay_tsx_template.json');
 
+const regexPattern_appName = /___appName___/g;
 const questions = [
 	{
 		type: 'input',
@@ -48,7 +49,7 @@ module.exports = function() {
 		generator(editorconfig_template);
 
 		// Generate package.json file
-		generator(package_json_template, answers.appName);
+		generator(package_json_template, answers);
 
 		// Generate tsconfig.json file.
 		generator(tsconfig_json_template);
@@ -57,30 +58,22 @@ module.exports = function() {
 		generator(tslint_json_template);
 
 		// Generate public/index.html file.
-		generator(index_html_template, answers.appName);
+		generator(index_html_template, answers);
 
 		// Generate index.tsx file
-		generator(src_index_tsx_template, '', answers.componentName);
+		generator(src_index_tsx_template);
 
-		// Generate Components/App.tsx file
-		generator(src_Components_app_tsx_template, '', answers.componentName);
+		// // Generate Components/App.tsx file
+		// generator(src_Components_app_tsx_template);
 
 		// Generate Store.ts
-		generator(src_Store_ts_template, '', answers.componentName);
+		generator(src_Store_ts_template);
 
 		// Generate RootReducer.ts
-		generator(
-			src_Reducers_RootReducer_ts_template,
-			'',
-			answers.componentName
-		);
+		generator(src_Reducers_RootReducer_ts_template);
 
 		//Genrate StoreStateType.ts
-		generator(
-			src_Types_StateTypes_StoreStateType_ts_template,
-			'',
-			answers.componentName
-		);
+		generator(src_Types_StoreStateType_ts_template);
 
 		//  Generate Settings/Path.ts
 		generator(src_Settings_Path_ts_template);
@@ -92,7 +85,7 @@ module.exports = function() {
 		generator(src_Components_Common_FourOhFour_tsx_template);
 
 		// Generate Services/delay.ts file
-		generator(src_Services_delay_tsx_template);
+		generator(src_Settings_delay_tsx_template);
 
 		// #endregion [REGION_CODE_GOLD] Generate Common Files
 
@@ -114,7 +107,7 @@ module.exports = function() {
 
 		// // Generate [ComponentName]ActionType.ts
 		// generator(
-		// 	src_Types_ActionTypes_ComponentActionType_ts_template,
+		// 	src_Types_ActionTypes_ActionType_ts_template,
 		// 	'',
 		// 	answers.componentName
 		// );
@@ -128,21 +121,21 @@ module.exports = function() {
 
 		// // Generate I[ComponentName]ActionInterface.ts
 		// generator(
-		// 	src_Actions_Interfaces_IComponentAction_ts_template,
+		// 	src_Actions_Interfaces_IAction_ts_template,
 		// 	'',
 		// 	answers.componentName
 		// );
 
 		// // Generate [ComponentName]Actions.ts
 		// generator(
-		// 	src_Actions_ComponentAction_ts_template,
+		// 	src_Actions_Action_ts_template,
 		// 	'',
 		// 	answers.componentName
 		// );
 
 		// // Generate [ComponentName]Services.ts
 		// generator(
-		// 	src_Services_ComponentService_ts_template,
+		// 	src_Services_Service_ts_template,
 		// 	'',
 		// 	answers.componentName
 		// );

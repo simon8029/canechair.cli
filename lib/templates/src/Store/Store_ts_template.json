@@ -1,6 +1,6 @@
 {
 	"type": "common",
-	"folder": "src/Store/",
+	"folder": "src/",
 	"fileName": "Store",
 	"extension": ".ts",
 	"prefix": "",

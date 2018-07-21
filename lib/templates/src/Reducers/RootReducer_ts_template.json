@@ -1,6 +1,6 @@
 {
 	"type": "common",
-	"folder": "src/Reducers/",
+	"folder": "src/",
 	"fileName": "RootReducer",
 	"extension": ".ts",
 	"surffix": "",
@@ -16,10 +16,10 @@
 		"\n",
 		"\nexport default rootReducer;"
 	],
-	"importBlock": [
+	"BlockTemplate_ImportBlock": [
 		"import { ___componentName___Reducer } from './___componentName___Reducer';"
 	],
-	"statementBlock": [
+	"BlockTemplate_StatementBlock": [
 		",\n___componentName___Module: ___componentName___Reducer"
 	]
 }

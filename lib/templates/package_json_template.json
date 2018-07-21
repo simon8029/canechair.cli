@@ -5,6 +5,7 @@
 	"extension": ".json",
 	"prefix": "",
 	"surffix": "",
+	"placeholder": "___appName___",
 	"content": [
 		"{",
 		"\n\t\"name\": \"___appName___\",",

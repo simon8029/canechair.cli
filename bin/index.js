@@ -22,9 +22,9 @@ program
 	});
 
 program
-	.command('new') // sub-command name
-	.alias('n') // alternative sub-command is `n`
-	.description('Create New Component') // command description
+	.command('new component') // sub-command name
+	.alias('nc') // alternative sub-command is `n`
+	.description('Create New Module') // command description
 
 	// function to execute when command is uses
 	.action(function() {

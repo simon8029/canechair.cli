@@ -1,0 +1,15 @@
+{
+	"type": "ModelType",
+	"placeholder": "___componentName___",
+
+	"content": [
+		"export class ___componentName___ModelType {",
+		"\n\tid: string;",
+		"\n\t___componentName___Name: string;",
+		"\n\t___componentName___Description: string;",
+		"\n}",
+		"\n",
+		"\nexport default ___componentName___ModelType;",
+		""
+	]
+}
