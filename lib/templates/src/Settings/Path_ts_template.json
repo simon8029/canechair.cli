@@ -1,9 +1,0 @@
-{
-	"type": "common",
-	"folder": "src/Settings/",
-	"fileName": "Path",
-	"extension": ".ts",
-	"prefix": "",
-	"surffix": "",
-	"content": ["export const BaseUrl = 'http://localhost:8139';"]
-}

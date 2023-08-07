@@ -1,0 +1,30 @@
+{
+  "name": "@canechair/cli",
+  "version": "0.0.0",
+  "description": "> TODO: description",
+  "author": "Simon X. L. <simon.lau@msn.com>",
+  "homepage": "https://github.com/simon8029/canechair.cli#readme",
+  "license": "ISC",
+  "main": "lib/index.js",
+  "bin": {
+    "cccli": "bin/cli.js"
+  },
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib",
+    "bin"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simon8029/canechair.cli.git"
+  },
+  "scripts": {
+    "test": "node ./__tests__/cli.test.js"
+  },
+  "bugs": {
+    "url": "https://github.com/simon8029/canechair.cli/issues"
+  }
+}

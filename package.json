@@ -1,36 +1,13 @@
 {
-	"version": "0.7.0",
-	"bin": {
-		"ccc": "bin/index.js"
-	},
-	"name": "canechair-cli",
-	"author": "Simon X.L.",
-	"description": "",
-	"keywords": [
-		"react",
-		"starter",
-		"typescript",
-		"redux",
-		"router",
-		"webpack",
-		"Thunk"
-	],
-	"license": "MIT",
-	"dependencies": {
-		"colors": "^1.3.0",
-		"commander": "^2.16.0",
-		"fs-extra": "^6.0.1",
-		"inquirer": "^6.0.0",
-		"pad": "^2.1.0",
-		"rimraf": "^2.6.2",
-		"rootpath": "^0.1.2"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/simon8029/canechair.cli.git"
-	},
-	"bugs": {
-		"url": "https://github.com/simon8029/canechair.cli/issues"
-	},
-	"homepage": "https://github.com/simon8029/canechair.cli#readme"
+  "name": "@canechair/cli",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "dependencies": {
+    "import-local": "^3.1.0"
+  },
+  "devDependencies": {
+    "lerna": "^7.1.4"
+  }
 }
