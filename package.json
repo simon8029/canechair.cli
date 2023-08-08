@@ -1,13 +1,11 @@
 {
-  "name": "@canechair/cli",
+  "name": "canechair_cli",
   "private": true,
   "workspaces": [
     "packages/*"
   ],
-  "dependencies": {
-    "import-local": "^3.1.0"
-  },
   "devDependencies": {
-    "lerna": "^7.1.4"
+    "lerna": "^7.1.4",
+    "typescript": "^5.1.6"
   }
 }

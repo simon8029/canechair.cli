@@ -1,0 +1,15 @@
+0 silly argv { _: [ 'repair' ], lernaVersion: '7.1.4', '$0': 'lerna' }
+1 notice cli v7.1.4
+2 verbose packageConfigs Resolving packages based on package.json "workspaces" configuration.
+3 verbose rootPath /Users/simon8029/Documents/projects/canechair.cli
+4 error Error: Failed to process the project graph with "nx-js-graph-plugin".
+4 error EACCES: permission denied, open '/Users/simon8029/Documents/projects/canechair.cli/node_modules/.cache/nx/parsed-lock-file.json'
+4 error     at Object.openSync (node:fs:603:3)
+4 error     at writeFileSync (node:fs:2324:35)
+4 error     at writeLastProcessedLockfileHash (/Users/simon8029/Documents/projects/canechair.cli/node_modules/nx/src/plugins/js/index.js:53:28)
+4 error     at /Users/simon8029/Documents/projects/canechair.cli/node_modules/nx/src/plugins/js/index.js:26:17
+4 error     at Generator.next (<anonymous>)
+4 error     at /Users/simon8029/Documents/projects/canechair.cli/node_modules/tslib/tslib.js:169:75
+4 error     at new Promise (<anonymous>)
+4 error     at Object.__awaiter (/Users/simon8029/Documents/projects/canechair.cli/node_modules/tslib/tslib.js:165:16)
+4 error     at Object.processProjectGraph (/Users/simon8029/Documents/projects/canechair.cli/node_modules/nx/src/plugins/js/index.js:16:57)
