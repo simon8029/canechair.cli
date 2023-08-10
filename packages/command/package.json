@@ -22,7 +22,5 @@
   "bugs": {
     "url": "https://github.com/simon8029/canechair.cli/issues"
   },
-  "dependencies": {
-    "commander": "^11.0.0"
-  }
+  "type": "module"
 }

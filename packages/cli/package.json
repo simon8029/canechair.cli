@@ -4,7 +4,9 @@
   "description": "> TODO: description",
   "author": "Simon X. L. <simon.lau@msn.com>",
   "homepage": "https://github.com/simon8029/canechair.cli#readme",
-  "license": "ISC",
+  "engines": {
+    "node": "20.0.0"
+  },
   "main": "lib/index.js",
   "bin": {
     "cccli1": "bin/cli.js"
@@ -28,8 +30,12 @@
     "url": "https://github.com/simon8029/canechair.cli/issues"
   },
   "dependencies": {
+    "chalk": "^5.3.0",
     "commander": "^11.0.0",
     "import-local": "^3.1.0",
-    "npmlog": "^7.0.1"
-  }
+    "npmlog": "^7.0.1",
+    "semver": "^7.5.4",
+    "@canechair-cli/utils": "*"
+  },
+  "type": "module"
 }

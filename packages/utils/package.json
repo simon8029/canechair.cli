@@ -1,9 +1,10 @@
 {
-  "name": "@canechair-cli/init",
+  "name": "@canechair-cli/utils",
   "version": "0.0.0",
-  "description": "Init command",
+  "description": "> TODO: description",
   "author": "Simon X. L. <simon.lau@msn.com>",
   "homepage": "https://github.com/simon8029/canechair.cli#readme",
+  "license": "ISC",
   "main": "lib/index.js",
   "directories": {
     "lib": "lib",
@@ -17,14 +18,13 @@
     "url": "git+https://github.com/simon8029/canechair.cli.git"
   },
   "scripts": {
-    "test": "node ./__tests__/init.test.js"
+    "test": "node ./__tests__/utils.test.js"
   },
   "bugs": {
     "url": "https://github.com/simon8029/canechair.cli/issues"
   },
-  "dependencies": {
-    "@canechair-cli/command": "*",
-    "@canechair-cli/utils": "*"
-  },
-  "type": "module"
+  "type": "module",
+  "devDependencies": {
+    "@types/npmlog": "^4.1.4"
+  }
 }

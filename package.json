@@ -5,6 +5,7 @@
     "packages/*"
   ],
   "devDependencies": {
+    "@types/node": "^20.4.9",
     "lerna": "^7.1.4",
     "typescript": "^5.1.6"
   }
