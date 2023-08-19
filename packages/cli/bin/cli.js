@@ -1,13 +1,13 @@
 #!/usr/bin/env node
 
 import importLocal from "import-local";
-import * as utils from "@canechair-cli/utils";
+import utils from "@canechair-cli/utils";
 import entry from "../lib/index.js";
+import { filename } from "dirname-filename-esm"
 
-console.log(`process.argv:`, process.argv);
-
-if (importLocal(new URL(import.meta.url).pathname)) {
-    utils.default.log.info("cli", "正在使用 cccli 本地版本");
+if (importLocal(filename(import.meta))) {
+    utils.log.info("cli", "正在使用 cccli 本地版本");
 } else {
+    // console.log(`process.argv:`, process.argv);
     entry(process.argv.slice(2));
 }

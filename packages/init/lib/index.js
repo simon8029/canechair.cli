@@ -1,5 +1,6 @@
 import Command from "@canechair-cli/command";
-import * as utils from "@canechair-cli/utils";
+import utils from "@canechair-cli/utils";
+
 
 class InitCommand extends Command {
   constructor(instance) {
@@ -11,7 +12,7 @@ class InitCommand extends Command {
       .description('初始化项目') // 命令描述
       .option('-f, --force', '是否强制初始化项目')  // 参数配置
       .action((name, opts) => { // 命令的具体实现 
-        console.log("init", name, opts) // 打印 init name opts
+        // console.log("init", name, opts) // 打印 init name opts
       })
   }
 
@@ -31,6 +32,14 @@ class InitCommand extends Command {
 
   action(name, opts) {
     utils.log.verbose("init", name, opts);
+
+    // new Promise((resolve, reject) => {
+    //   resolve();
+    // }).then(() => {
+    //   throw new Error("promise error");
+    // })
+
+    // throw new Error("common error...")
   }
 }
 
